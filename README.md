@@ -1,2 +1,3 @@
 # binding-of-channel-points-client
-Client that subscribes for channel point web hooks
+Client that communitcates with server via a socket connection to recieve updates
+
