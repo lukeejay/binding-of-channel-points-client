@@ -1,0 +1,39 @@
+<mat-card class="command-card">
+
+    <mat-card-title-group>
+        <mat-card-title> Give Bob's Brain </mat-card-title>
+        <mat-card-subtitle>
+            <span *ngIf="editMode">50,000 cp</span>
+            <mat-form-field *ngIf="!editMode" appearance="fill">
+                <mat-label>Channel Point Cost</mat-label>
+                <input matInput type="text">
+            </mat-form-field>
+            
+        </mat-card-subtitle>
+        <img mat-card-sm-image src="../../assets/bobsbrain.png">
+        <div>
+            <button (click)="toggleEditMode()" mat-icon-button>
+                <mat-icon *ngIf="editMode">mode_edit</mat-icon>
+                <mat-icon *ngIf="!editMode">not_interested</mat-icon>
+            </button>
+            <br>
+            <button mat-icon-button>
+                <mat-icon >close</mat-icon>
+            </button>
+        </div>
+    </mat-card-title-group>
+</mat-card>
+
+<mat-card class="command-card" style="display: flex; justify-content: center; flex-direction: column;">
+    <mat-form-field appearance="fill">
+        <mat-label>Select a Command</mat-label>
+        <mat-select>
+            <mat-option value="volvo">Volvo</mat-option>
+            <mat-option value="saab" disabled>Saab</mat-option>
+            <mat-option value="mercedes">Mercedes</mat-option>
+            <mat-option value="audi">Audi</mat-option>
+        </mat-select>
+    </mat-form-field>
+</mat-card>
+
+
