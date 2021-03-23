@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Enemy } from '../enemy';
+import { EnemyService } from '../enemy.service';
 
 @Component({
   selector: 'app-command',
@@ -7,8 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CommandComponent implements OnInit {
 
+  enemies: Enemy[] = [];
   editMode = false;
-  constructor() { }
+  
+  constructor(private enemyService: EnemyService) {
+    this.enemyService.getEnemies().subscribe( (enemies) => this.enemies = enemies)
+   }
 
   ngOnInit(): void {
   }

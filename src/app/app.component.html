@@ -1,4 +1,16 @@
-<mat-toolbar>
-  <span>Binding Of Channel Points</span>
+<mat-toolbar *ngIf=registeredWithTwitch>
+  <h1>Binding Of Channel Points</h1>
+  <span class="flex-expand"></span>
+    <h3 *ngIf="user">{{user.displayname}}</h3>
+    <img *ngIf="user" class="user-profile-img" src={{user.profileimageurl}}>
 </mat-toolbar>
-<app-command></app-command>
+<div *ngIf="registeredWithTwitch">
+  <app-command></app-command>
+</div>
+<div *ngIf="!registeredWithTwitch">
+  <img class="isaac-background" src="../assets/isaac.png">
+  <h1 class="center-title">Binding Of Channel Points</h1>
+  <a class="center" style="padding: 10px" mat-raised-button color="primary" href="http://localhost:3000/authenticate">Register with Twitch</a>
+
+</div>
+

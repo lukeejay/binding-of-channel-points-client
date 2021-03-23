@@ -1,0 +1,53 @@
+.isaac-background {
+    height: 100%;
+    width: 100%;
+    opacity: 0.4;
+    position: absolute;
+    top: 0;
+    left: 0;
+   
+}
+.demo-bg {
+    opacity: 0.6;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+  }
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+.center-title {
+    width: 40%;
+    line-height: 100%;
+    font-size: 750%;
+    margin: 0;
+    color: #fd3a1c;
+    text-align: center;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-text-stroke: 3px #661301;
+}
+.user-profile-img {
+    height: 100%;
+    margin: 10px;
+}
+
+.flex-expand {
+    flex: 1 1 auto;
+}
+
+h1 {
+    font-family: 'upheaval'
+}
